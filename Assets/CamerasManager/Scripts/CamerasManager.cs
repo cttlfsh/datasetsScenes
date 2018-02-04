@@ -1,0 +1,128 @@
+﻿using UnityEngine;
+using System.Collections.Generic;
+
+public class CamerasManager : MonoBehaviour {
+
+   public bool enableVideoSave;
+   public bool enableDataSave;
+
+   public string folder = "AcquisizioneVideo";
+   public int frameRate = 25;
+
+   public List<CameraType> cameras = new List<CameraType>();
+
+   private GameObject[] persone;
+   private GameObject[] targetsCamera;
+
+   private string tagPerson = "Person";
+   private string tagGroup = "Group";
+   private string tagStationaryGroup = "StationaryGroup";
+
+   // inizializzazione
+   void Start() {
+      if(enableVideoSave) {
+         Time.captureFramerate = frameRate;
+
+         if(cameras.Count > 0) {
+            // crea la cartella principale nella quale verranno create una sottocartella per ogni telecamera
+            folder = folder + System.DateTime.Now.ToString("_yyyy-MM-dd_HH-mm-ss");
+            if(System.IO.Directory.Exists(folder)) {
+               System.IO.Directory.Delete(folder, true);
+            }
+            System.IO.Directory.CreateDirectory(folder);
+
+            // crea una sottocartella per ogni telecamera
+            for(int i = 0; i < cameras.Count; ++i) {
+               if(cameras[i].Camera) {
+                  cameras[i].Folder = string.Format("{0}/{1}_{2}x{3}_{4}fps",
+                                                     folder,
+                                                     cameras[i].Name,
+                                                     cameras[i].Camera.rect.width,
+                                                     cameras[i].Camera.rect.height,
+                                                     frameRate);
+                  System.IO.Directory.CreateDirectory(cameras[i].Folder);
+               }
+            }
+         }
+      }
+   }
+
+   // funzione chiamata dopo Update()
+   void LateUpdate() {
+      if(enableVideoSave) {
+         // per ogni telecamera
+         for(int i = 0; i < cameras.Count; ++i) {
+            if(cameras[i].Camera) {
+               RenderTexture rt = new RenderTexture((int) cameras[i].Camera.rect.width, (int) cameras[i].Camera.rect.height, 24);
+               cameras[i].Camera.targetTexture = rt;
+
+               rt.antiAliasing = 8;
+
+               Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+               cameras[i].Camera.Render();
+               RenderTexture.active = rt;
+               screenShot.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+               cameras[i].Camera.targetTexture = null;
+               RenderTexture.active = null; // JC: added to avoid errors
+               Destroy(rt);
+               byte[] bytes = screenShot.EncodeToPNG();
+
+               string filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
+               System.IO.File.WriteAllBytes(filename, bytes);
+
+               if(enableDataSave) {
+                  string fileNameText = string.Format("{0}/pos.txt", cameras[i].Folder);
+
+                  if(!System.IO.File.Exists(fileNameText)) {
+                     System.IO.File.WriteAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
+                                                                                 "frame",
+                                                                                 "personID",
+                                                                                 "globalX",
+                                                                                 "globalY",
+                                                                                 "globalZ",
+                                                                                 "pixelX",
+                                                                                 "pixelY",
+                                                                                 "globalDist",
+                                                                                 "tag",
+                                                                                 "groupID"));
+                  }
+
+                  persone = GameObject.FindGameObjectsWithTag(tagPerson);
+                  foreach(GameObject person in persone) {
+
+                     Transform targetCam = person.transform.Find("TargetCamera");
+                     Vector3 screenPos = cameras[i].Camera.WorldToViewportPoint(targetCam.position);
+                     screenPos.x = screenPos.x * cameras[i].Camera.rect.width;
+                     screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
+
+                     if(person.transform.parent.CompareTag(tagGroup)) {
+                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, screenPos.z, "GROUP", person.transform.parent.GetComponent<Group>().GroupID));
+                     } else if(person.transform.parent.CompareTag(tagStationaryGroup)) {
+                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, screenPos.z, "STATIONARY", person.transform.parent.GetComponent<Group>().GroupID));
+                     } else {
+                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, screenPos.z));
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+[System.Serializable]
+public class CameraType {
+   public string Name;
+   public Camera Camera;
+   public string Folder;
+
+   public CameraType(string _Name) {
+      Name = _Name;
+   }
+}
