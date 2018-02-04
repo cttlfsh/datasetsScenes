@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datasetsScenes", "Assembly-CSharp.csproj", "{E96D1718-F583-F95B-1074-1DF3338E0D0F}"
 EndProject
-Project("{20A615CA-2A12-F0DE-20F6-41662B61C577}") = "datasetsScenes", "Assembly-UnityScript.unityproj", "{9FF7B264-14DF-C885-53CD-208EC47EADBE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datasetsScenes", "Assembly-CSharp-Editor.csproj", "{740F9A86-C491-F7D2-6319-06CC1D96D7F0}"
 EndProject
 Global
@@ -17,10 +15,6 @@ Global
 		{E96D1718-F583-F95B-1074-1DF3338E0D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E96D1718-F583-F95B-1074-1DF3338E0D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E96D1718-F583-F95B-1074-1DF3338E0D0F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9FF7B264-14DF-C885-53CD-208EC47EADBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9FF7B264-14DF-C885-53CD-208EC47EADBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9FF7B264-14DF-C885-53CD-208EC47EADBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9FF7B264-14DF-C885-53CD-208EC47EADBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{740F9A86-C491-F7D2-6319-06CC1D96D7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{740F9A86-C491-F7D2-6319-06CC1D96D7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{740F9A86-C491-F7D2-6319-06CC1D96D7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -290,7 +290,7 @@ namespace UMA.Examples
 
 				tempSlotList.Add(umaContext.InstantiateSlot("FemaleEyes"));
 				tempSlotList[tempSlotList.Count - 1].AddOverlay(umaContext.InstantiateOverlay("EyeOverlay"));
-				tempSlotList[tempSlotList.Count - 1].AddOverlay(umaContext.InstantiateOverlay("EyeOverlayAdjust", new Color(Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f), 1)));
+				tempSlotList[tempSlotList.Count - 1].AddOverlay(umaContext.InstantiateOverlay("EyeOveFemaleHead01rlayAdjust", new Color(Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f), Random.Range(0.1f, 0.9f), 1)));
 
 				int headIndex = 0;
 
