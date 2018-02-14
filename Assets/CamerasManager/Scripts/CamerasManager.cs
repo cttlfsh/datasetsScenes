@@ -71,21 +71,23 @@ public class CamerasManager : MonoBehaviour {
                System.IO.File.WriteAllBytes(filename, bytes);
 
                if(enableDataSave) {
-                  string fileNameText = string.Format("{0}/pos.txt", cameras[i].Folder);
+                  string fileWorld = string.Format("{0}/../../Python/world.txt", cameras[i].Folder);
+                  string fileHead = string.Format("{0}/../../Python/head.txt", cameras[i].Folder);
+                  string fileFeet = string.Format("{0}/../../Python/feet.txt", cameras[i].Folder);
 
-                  if(!System.IO.File.Exists(fileNameText)) {
-                     System.IO.File.WriteAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
-                                                                                 "frame",
-                                                                                 "personID",
-                                                                                 "globalX",
-                                                                                 "globalY",
-                                                                                 "globalZ",
-                                                                                 "pixelX",
-                                                                                 "pixelY",
-                                                                                 "globalDist",
-                                                                                 "tag",
-                                                                                 "groupID"));
-                  }
+                  //      if (!System.IO.File.Exists(fileNameText)) {
+                  //   //System.IO.File.WriteAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
+                  //   //                                                            "frame",
+                  //   //                                                            "personID",
+                  //   //                                                            "globalX",
+                  //   //                                                            "globalY",
+                  //   //                                                            "globalZ",
+                  //   //                                                            "pixelX",
+                  //   //                                                            "pixelY",
+                  //   //                                                            // "globalDist",
+                  //   //                                                            // "tag",
+                  //   //                                                            "groupID"));
+                  //}
 
                   persone = GameObject.FindGameObjectsWithTag(tagPerson);
                   foreach(GameObject person in persone) {
@@ -96,18 +98,36 @@ public class CamerasManager : MonoBehaviour {
                      screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
 
                      if(person.transform.parent.CompareTag(tagGroup)) {
-                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
-                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
-                           screenPos.x, screenPos.y, screenPos.z, "GROUP", person.transform.parent.GetComponent<Group>().GroupID));
+
+                        System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                        System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                        System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+
                      } else if(person.transform.parent.CompareTag(tagStationaryGroup)) {
-                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",
-                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
-                           screenPos.x, screenPos.y, screenPos.z, "STATIONARY", person.transform.parent.GetComponent<Group>().GroupID));
+
+                        System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                        System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                        System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+
                      } else {
-                        System.IO.File.AppendAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\n",
-                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.z,
-                           screenPos.x, screenPos.y, screenPos.z));
-                     }
+
+                        System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, targetCam.position.x, targetCam.position.y, targetCam.position.y, targetCam.position.z,
+                           screenPos.x, screenPos.y, "0"));
+                        System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, "0"));
+                        System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
+                           Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, "0"));
+
+                            }
                   }
                }
             }

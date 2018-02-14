@@ -318,7 +318,7 @@ Transform:
   m_LocalScale: {x: 3, y: 1, z: 13.99999}
   m_Children: []
   m_Father: {fileID: 1653035596}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &146148283
 MeshRenderer:
@@ -840,7 +840,7 @@ Transform:
   - {fileID: 1307775005}
   - {fileID: 794271374}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720984683
 GameObject:
@@ -1382,7 +1382,7 @@ Transform:
   m_Children:
   - {fileID: 1800154876}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &969945098
 MonoBehaviour:
@@ -1833,7 +1833,7 @@ Transform:
   - {fileID: 988542994}
   - {fileID: 530457178}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1063966604
 MonoBehaviour:
@@ -1846,10 +1846,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a0afe466492de42ba17ba30a303e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableVideoSave: 0
-  enableDataSave: 0
+  enableVideoSave: 1
+  enableDataSave: 1
   folder: VideoCapture
-  frameRate: 25
+  frameRate: 15
   cameras:
   - Name: Camera_001
     Camera: {fileID: 1384633138}
@@ -1935,13 +1935,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1111829864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34571838, y: -18.198067, z: 1.9387283}
+  m_LocalPosition: {x: 0.34571838, y: -7.94, z: 1.9387283}
   m_LocalScale: {x: 0.439231, y: 0.439231, z: 0.439231}
   m_Children:
   - {fileID: 1203179015}
   - {fileID: 564248444}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123573054
 GameObject:
@@ -2272,12 +2272,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170619367}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.6, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 1, z: 14}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.975829, y: 0, z: 1.0871787}
+  m_LocalScale: {x: 3.513848, y: 0.439231, z: 6.1492343}
   m_Children: []
-  m_Father: {fileID: 1653035596}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1170619369
 MeshRenderer:
@@ -2638,7 +2638,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384633135}
   m_LocalRotation: {x: 0.3285784, y: -0.62612796, z: 0.3285784, w: 0.62612796}
-  m_LocalPosition: {x: 7.07, y: -4.48, z: 4.08}
+  m_LocalPosition: {x: 7.07, y: 7.15, z: 4.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1063966603}
@@ -3111,7 +3111,7 @@ MonoBehaviour:
   var: 0.83
   groupSizeProbability: []
   minTime: 0.5
-  maxTime: 2
+  maxTime: 1
   targetList:
   - target: {fileID: 1958069675}
     probability: 0.5
@@ -3179,7 +3179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1644685051 stripped
 Transform:
@@ -3212,7 +3212,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1170619368}
   - {fileID: 146148282}
   m_Father: {fileID: 564248444}
   m_RootOrder: 0
@@ -3334,6 +3333,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819590097}
+--- !u!1001 &1864941218
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.19270372
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22689843
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22689842
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22689842
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 66.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 41.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5041219
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5041219
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5041219
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: df740463fd64382428b2f3c31204e8fe, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1867415764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,7 +3459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1925588068
 GameObject:
@@ -3398,7 +3479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1925588069
 Transform:
   m_ObjectHideFlags: 0
@@ -3522,7 +3603,7 @@ MonoBehaviour:
   var: 0.83
   groupSizeProbability: []
   minTime: 0.5
-  maxTime: 2
+  maxTime: 1
   targetList:
   - target: {fileID: 1515003880}
     probability: 0.5
@@ -3620,7 +3701,7 @@ RectTransform:
   - {fileID: 2141797750}
   - {fileID: 1145565757}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3958,7 +4039,7 @@ MonoBehaviour:
   var: 0.83
   groupSizeProbability: []
   minTime: 0.5
-  maxTime: 2
+  maxTime: 1
   targetList:
   - target: {fileID: 1515003880}
     probability: 0.5

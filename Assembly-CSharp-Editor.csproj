@@ -131,7 +131,7 @@
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_SetValue_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_GetValue_Fragment.cs.txt" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/aloci/Desktop/datasetsScenes/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/aloci/Desktop/Dataset/datasetsScenes/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
