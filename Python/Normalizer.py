@@ -50,8 +50,8 @@ for scene in scenes:
 				frames.append(int(line.split("\t")[0]))
 				personIDs.append(int(line.split("\t")[1]))
 				column_x.append(float(line.split("\t")[2]))
-				column_z.append(float(line.split("\t")[5]))
-				groupIDs.append(int(line.split("\t")[8]))
+				column_z.append(float(line.split("\t")[4]))
+				groupIDs.append(int(line.split("\t")[10]))
 
 
 		### Fill the lists which will contain values for each

@@ -733,7 +733,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 530457174}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &530457178
 Transform:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988542993}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &988542997
 Camera:
   m_ObjectHideFlags: 0
@@ -2594,7 +2594,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384633135}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1384633138
 Camera:
   m_ObjectHideFlags: 0
@@ -3048,7 +3048,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1511260013}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &1511260017
 Transform:
   m_ObjectHideFlags: 0
