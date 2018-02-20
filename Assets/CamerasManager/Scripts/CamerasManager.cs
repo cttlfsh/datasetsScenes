@@ -135,9 +135,7 @@ public class CamerasManager : MonoBehaviour
                             //Transform neck = spine1.Find("Neck");
                             //Transform head = neck.Find("Head");
                             //Transform head = person.transform.Find("Root/Global/Position/Hips/LowerBack/Spine/Spine1/Neck/Head");
-                            Vector3 screenPos = cameras[i].Camera.WorldToViewportPoint(targetCam.position);
-                            screenPos.x = screenPos.x * cameras[i].Camera.rect.width;
-                            screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
+
 
                             // To prevent tracking to happen when person hierarchy is not complete yet
                             if (head == null)
@@ -145,6 +143,13 @@ public class CamerasManager : MonoBehaviour
                                 return;
                             }
 
+                            Vector3 screenPos = cameras[i].Camera.WorldToViewportPoint(targetCam.position);
+                            Vector3 screenPosHead = cameras[i].Camera.WorldToViewportPoint(head.position);
+                            screenPos.x = screenPos.x * cameras[i].Camera.rect.width;
+                            screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
+                            screenPosHead.x = screenPosHead.x * cameras[i].Camera.rect.width;
+                            screenPosHead.y = cameras[i].Camera.rect.height - (screenPosHead.y * cameras[i].Camera.rect.height);
+                            
                             // Frame; PersonID; FeetX; FeetY; FeetZ; HeadX; HeadY; HeadZ; ScreenX; ScreenY; GroupID
                             if (person.transform.parent.CompareTag(tagGroup))
                             {
@@ -155,7 +160,7 @@ public class CamerasManager : MonoBehaviour
                                    head.position.x, head.position.y, head.position.z,
                                    screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
                                    Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
 
@@ -169,7 +174,7 @@ public class CamerasManager : MonoBehaviour
                                    head.position.x, head.position.y, head.position.z,
                                    screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
                                    Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
 
