@@ -492,7 +492,7 @@ public class Person : MonoBehaviour
         float sqrSpeedTreshold = 0.4f;
         if (totalForce.magnitude > 20)
         {
-            Debug.Log(totalForce.magnitude);
+            //Debug.Log(totalForce.magnitude);
             totalForce = totalForce.normalized;
         }
 

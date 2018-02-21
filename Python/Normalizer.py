@@ -29,7 +29,7 @@ mins_z = []
 
 
 ### Get the current directory
-cwd = os.getcwd() + "/world*.txt"
+cwd = os.getcwd() + "/World*.txt"
 ### List of all the .txt files
 scenes = glob.glob(cwd)
 for scene in scenes:
@@ -51,7 +51,7 @@ for scene in scenes:
 				personIDs.append(int(line.split("\t")[1]))
 				column_x.append(float(line.split("\t")[2]))
 				column_z.append(float(line.split("\t")[4]))
-				groupIDs.append(int(line.split("\t")[10]))
+				groupIDs.append(int(line.split("\t")[8]))
 
 
 		### Fill the lists which will contain values for each
