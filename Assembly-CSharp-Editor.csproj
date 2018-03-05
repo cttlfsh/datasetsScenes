@@ -51,6 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\CamerasManager_Editor.cs" />
+     <Compile Include="Assets\Editor\GLDebug.cs" />
+     <Compile Include="Assets\Editor\PeopleEditorGenerator_Editor.cs" />
+     <Compile Include="Assets\Editor\RectangularSource_Editor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicAssetLoaderEditor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicCharacterAvatarEditor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicCharacterSystemEditor.cs" />
@@ -118,6 +122,7 @@
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDna_Save_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_GetIndex_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_GetNames_Fragment.cs.txt" />
+     <None Include="Assets\Editor\NewSurfaceShader 1.shader" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDna_Template.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_Byte_FromDna_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_Byte_Fields_Fragment.cs.txt" />
@@ -129,6 +134,7 @@
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDna_Load_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_SetIndex_Fragment.cs.txt" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_SetValue_Fragment.cs.txt" />
+     <None Include="Assets\Editor\NewSurfaceShader 2.shader" />
      <None Include="Assets\UMA\Core\Scripts\Editor\Templates\UmaDnaChild_GetValue_Fragment.cs.txt" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>C:/Users/aloci/Desktop/Dataset/datasetsScenes/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>

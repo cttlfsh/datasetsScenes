@@ -11,7 +11,6 @@ public class CamerasManager : MonoBehaviour
     public int frameRate = 25;
 
     public List<CameraType> cameras = new List<CameraType>();
-    public Camera[] cameraObjects;
 
     private GameObject[] persone;
     private GameObject[] targetsCamera;
@@ -23,7 +22,6 @@ public class CamerasManager : MonoBehaviour
     // inizializzazione
     void Start()
     {
-        cameraObjects = new Camera[cameras.Count];
         if (enableVideoSave)
         {
             Time.captureFramerate = frameRate;
@@ -146,14 +144,14 @@ public class CamerasManager : MonoBehaviour
                             }
 
                             //Camera cam = GameObject.Find("Camera_001").GetComponent<Camera>();
-                            cameraObjects[i] = GameObject.Find(cameras[i].Name).GetComponent<Camera>();
+                            //cameraObjects[i] = GameObject.Find(cameras[i].Name).GetComponent<Camera>();
                             //Debug.Log(cameraObjects[i].pixelWidth + ", " + cameraObjects[i].pixelHeight);
 
 
-                            Vector3 screenPos = cameraObjects[i].WorldToScreenPoint(targetCam.position);
-                            screenPos.y = cameraObjects[i].pixelHeight - screenPos.y;
-                            Vector3 screenPosHead = cameraObjects[i].WorldToScreenPoint(head.position);
-                            screenPosHead.y = cameraObjects[i].pixelHeight - screenPosHead.y;
+                            Vector3 screenPos = cameras[i].Camera.WorldToScreenPoint(targetCam.position);
+                            screenPos.y = cameras[i].Camera.pixelHeight - screenPos.y;
+                            Vector3 screenPosHead = cameras[i].Camera.WorldToScreenPoint(head.position);
+                            screenPosHead.y = cameras[i].Camera.pixelHeight - screenPosHead.y;
                             //screenPos.x = screenPos.x * cameras[i].Camera.rect.width;
                             //screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
                             //screenPosHead.x = screenPosHead.x * cameras[i].Camera.rect.width;
