@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/UcyZara.unity
+- path: Assets/Scenes/UcyUniversity.unity
   isLoaded: 1
   isActive: 1
