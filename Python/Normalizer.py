@@ -29,7 +29,7 @@ mins_z = []
 
 
 ### Get the current directory
-cwd = os.getcwd() + "/World*.txt"
+cwd = os.getcwd() + "/*_World*.txt"
 ### List of all the .txt files
 scenes = glob.glob(cwd)
 for scene in scenes:
@@ -89,7 +89,7 @@ for scene in scenes:
 	for z in all_column_z[i]:
 		z_norm.append(normalize(z, mins_z[i], normalizer))
 	### Create the .csv files for each camera recording
-	with open("results" + "_" + str(i) + ".csv", "w") as f:
+	with open(str(scene) + "_results" + "_" + str(i) + ".csv", "w") as f:
 		writer = csv.writer(f, delimiter = ',')
 		writer.writerow(all_frames[i])
 		writer.writerow(all_personIDs[i])
