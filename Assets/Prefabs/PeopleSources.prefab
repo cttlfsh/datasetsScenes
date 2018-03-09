@@ -26,7 +26,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1089218332420322
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4048650450856292
 Transform:
   m_ObjectHideFlags: 1
@@ -136,8 +136,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702097921556668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.46, y: 0, z: -24.3}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 6, y: 0, z: -29.5}
+  m_LocalScale: {x: 10, y: 0, z: 10}
   m_Children: []
   m_Father: {fileID: 4750115308279476}
   m_RootOrder: 0
@@ -188,8 +188,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1798556010533314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0, z: 50.4}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 15.5, y: 0, z: 22.4}
+  m_LocalScale: {x: 10, y: 0, z: 10}
   m_Children: []
   m_Father: {fileID: 4750115308279476}
   m_RootOrder: 1
@@ -201,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1498879371253576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 18.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4048650450856292}
@@ -220,8 +220,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035145948441292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.3, y: 0, z: 28.9}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -16.1, y: 0, z: 25.9}
+  m_LocalScale: {x: 10, y: 0, z: 10}
   m_Children: []
   m_Father: {fileID: 4750115308279476}
   m_RootOrder: 2
@@ -407,8 +407,8 @@ MonoBehaviour:
   selection: {fileID: 1000010686487950, guid: db3c5c560f9896b4ebbf58f02430e07b, type: 2}
   var: 0.83
   groupSizeProbability: []
-  minTime: 100
-  maxTime: 100
+  minTime: 0.2
+  maxTime: 0.5
   targetList:
   - target: {fileID: 4642732987969094}
     probability: 0.5

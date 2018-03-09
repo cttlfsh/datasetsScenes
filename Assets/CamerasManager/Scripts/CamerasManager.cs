@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CamerasManager : MonoBehaviour
 {
@@ -18,10 +19,12 @@ public class CamerasManager : MonoBehaviour
     private string tagPerson = "Person";
     private string tagGroup = "Group";
     private string tagStationaryGroup = "StationaryGroup";
+    private string sceneName;
 
     // inizializzazione
     void Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
         if (enableVideoSave)
         {
             Time.captureFramerate = frameRate;
@@ -83,9 +86,9 @@ public class CamerasManager : MonoBehaviour
 
                     if (enableDataSave)
                     {
-                        string fileWorld = string.Format("{0}/../../Python/World" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
-                        string fileHead = string.Format("{0}/../../Python/" + cameras[i].Name + "_head" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
-                        string fileFeet = string.Format("{0}/../../Python/" + cameras[i].Name + "_feet" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
+                        string fileWorld = string.Format("{0}/../../Python/" + sceneName + "_" + "World" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
+                        string fileHead = string.Format("{0}/../../Python/" + sceneName + "_" + cameras[i].Name + "_head" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
+                        string fileFeet = string.Format("{0}/../../Python/" + sceneName + "_" + cameras[i].Name + "_feet" + System.DateTime.Now.ToString("_yyyy-MM-dd_HH") + ".txt", cameras[i].Folder);
 
                         //      if (!System.IO.File.Exists(fileNameText)) {
                         //   //System.IO.File.WriteAllText(fileNameText, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\t{9}\n",

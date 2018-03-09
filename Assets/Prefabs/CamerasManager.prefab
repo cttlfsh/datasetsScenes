@@ -161,13 +161,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865461123416798}
-  m_LocalRotation: {x: 0.3285784, y: -0.62612796, z: 0.3285784, w: 0.62612796}
-  m_LocalPosition: {x: 7.07, y: 7.15, z: 4.08}
+  m_LocalRotation: {x: -0.16174543, y: 0.8279723, z: -0.30135724, w: -0.44439197}
+  m_LocalPosition: {x: 35.5, y: 29.599998, z: 38.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4399582169166716}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 55.379, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 236.44699, z: 0}
 --- !u!20 &20012778313382838
 Camera:
   m_ObjectHideFlags: 1
@@ -182,8 +182,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1024
+    height: 768
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -290,8 +290,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1024
+    height: 768
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a0afe466492de42ba17ba30a303e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableVideoSave: 1
-  enableDataSave: 1
+  enableVideoSave: 0
+  enableDataSave: 0
   folder: VideoCapture
   frameRate: 15
   cameras:
@@ -362,7 +362,6 @@ MonoBehaviour:
   - Name: Camera_004
     Camera: {fileID: 20655417411558074}
     Folder: VideoCapture/Camera_004
-  cameraObjects: []
 --- !u!124 &124044031586294578
 Behaviour:
   m_ObjectHideFlags: 1

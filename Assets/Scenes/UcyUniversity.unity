@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 153175439}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Oggetti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,7 +443,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4750115308279476, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19
+      value: 18.9
       objectReference: {fileID: 0}
     - target: {fileID: 4750115308279476, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -469,18 +469,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 4642732987969094, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 37
-      objectReference: {fileID: 0}
-    - target: {fileID: 4048650450856292, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 4048650450856292, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -29.45
-      objectReference: {fileID: 0}
+    - target: {fileID: 114923416482774746, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: generator
+      value: 
+      objectReference: {fileID: 188028092}
+    - target: {fileID: 114923416482774746, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: slotLibrarry
+      value: 
+      objectReference: {fileID: 243625094}
+    - target: {fileID: 114923416482774746, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: overlayLibrary
+      value: 
+      objectReference: {fileID: 919768053}
+    - target: {fileID: 114923416482774746, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: raceLibrary
+      value: 
+      objectReference: {fileID: 1122091259}
     - target: {fileID: 114817241719901614, guid: 9762e5d476f12044dbb60ef696b4382d,
         type: 2}
       propertyPath: generator
@@ -501,20 +509,26 @@ Prefab:
       propertyPath: raceLibrary
       value: 
       objectReference: {fileID: 2071351888}
-    - target: {fileID: 114817241719901614, guid: 9762e5d476f12044dbb60ef696b4382d,
+    - target: {fileID: 114696398399728290, guid: 9762e5d476f12044dbb60ef696b4382d,
         type: 2}
-      propertyPath: minTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114817241719901614, guid: 9762e5d476f12044dbb60ef696b4382d,
+      propertyPath: generator
+      value: 
+      objectReference: {fileID: 188028092}
+    - target: {fileID: 114696398399728290, guid: 9762e5d476f12044dbb60ef696b4382d,
         type: 2}
-      propertyPath: maxTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1498879371253576, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: slotLibrarry
+      value: 
+      objectReference: {fileID: 243625094}
+    - target: {fileID: 114696398399728290, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: overlayLibrary
+      value: 
+      objectReference: {fileID: 919768053}
+    - target: {fileID: 114696398399728290, guid: 9762e5d476f12044dbb60ef696b4382d,
+        type: 2}
+      propertyPath: raceLibrary
+      value: 
+      objectReference: {fileID: 1122091259}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9762e5d476f12044dbb60ef696b4382d, type: 2}
   m_IsPrefabParent: 0
@@ -532,7 +546,7 @@ GameObject:
   - component: {fileID: 391251163}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Oggetti
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 391251161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 17.41, z: -12}
+  m_LocalPosition: {x: -12, y: 16.86, z: -12}
   m_LocalScale: {x: 25, y: 4, z: 45}
   m_Children: []
   m_Father: {fileID: 146566643}
@@ -595,7 +609,7 @@ BoxCollider:
   m_GameObject: {fileID: 391251161}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2260,7 +2274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1911320246
 Transform:
   m_ObjectHideFlags: 0
@@ -2300,7 +2314,7 @@ GameObject:
   - component: {fileID: 2022075225}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Oggetti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
