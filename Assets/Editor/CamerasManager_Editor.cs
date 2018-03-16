@@ -19,6 +19,8 @@ public class CamerasManager_Editor : Editor {
       GUILayout.BeginVertical();
       script.enableVideoSave = EditorGUILayout.BeginToggleGroup("Save Video", script.enableVideoSave);
       script.enableDataSave = EditorGUILayout.ToggleLeft("Save Data", script.enableDataSave);
+      script.limitTrajectories = EditorGUILayout.ToggleLeft("Limit Trajectories", script.limitTrajectories);
+      script.maxTrajectories = EditorGUILayout.IntField("Max Trajectories", script.maxTrajectories);
       script.folder = EditorGUILayout.TextField("Folder", script.folder);
       GUILayout.EndVertical();
       GUILayout.EndHorizontal();

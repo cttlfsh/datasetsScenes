@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1286590785749002
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1537658466752912
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1865461123416798
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,13 +122,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1102820086991950}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: -5.9, y: 24.6, z: -0.6995053}
+  m_LocalRotation: {x: -0.14601342, y: 0.6838723, z: -0.14255074, w: -0.70048416}
+  m_LocalPosition: {x: 15.63368, y: 6.667019, z: -2.392892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4399582169166716}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 23.549, y: 271.375, z: 0}
 --- !u!4 &4761264187053568
 Transform:
   m_ObjectHideFlags: 1
@@ -148,8 +148,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1824018851885310}
-  m_LocalRotation: {x: 0.10076746, y: -0.891275, z: 0.36917812, w: 0.24327435}
-  m_LocalPosition: {x: 15.7, y: 11.9, z: 23.4}
+  m_LocalRotation: {x: 0.30664283, y: -0.63861996, z: 0.3084887, w: 0.6347989}
+  m_LocalPosition: {x: 16.899244, y: 14.886733, z: 5.5483265}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 4399582169166716}
@@ -161,8 +161,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865461123416798}
-  m_LocalRotation: {x: -0.16174543, y: 0.8279723, z: -0.30135724, w: -0.44439197}
-  m_LocalPosition: {x: 35.5, y: 29.599998, z: 38.3}
+  m_LocalRotation: {x: 0.7071069, y: 0.0000004172324, z: -0.00000008940695, w: 0.7071067}
+  m_LocalPosition: {x: 1.275956, y: 19.19233, z: -2.056496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4399582169166716}
@@ -182,8 +182,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1024
-    height: 768
+    width: 1280
+    height: 720
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -218,8 +218,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1280
+    height: 720
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -254,8 +254,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 1280
+    height: 720
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -351,17 +351,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a0afe466492de42ba17ba30a303e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableVideoSave: 0
-  enableDataSave: 0
-  folder: VideoCapture
+  enableVideoSave: 1
+  enableDataSave: 1
+  limitTrajectories: 0
+  maxTrajectories: 204
+  folder: VideoEthUniv
   frameRate: 15
   cameras:
   - Name: Camera_001
     Camera: {fileID: 20012778313382838}
     Folder: VideoCapture/Camera_001
-  - Name: Camera_004
-    Camera: {fileID: 20655417411558074}
+  - Name: Camera_002
+    Camera: {fileID: 20222965347511192}
     Folder: VideoCapture/Camera_004
+  - Name: Camera_003
+    Camera: {fileID: 20314637303153720}
+    Folder: 
 --- !u!124 &124044031586294578
 Behaviour:
   m_ObjectHideFlags: 1
