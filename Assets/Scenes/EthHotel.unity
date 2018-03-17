@@ -112,6 +112,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &59747280 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1599167250106562, guid: 9f921d082abd1ff459782151afcd8106,
+    type: 2}
+  m_PrefabInternal: {fileID: 1289164746}
+--- !u!114 &59747282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59747280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+16
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1001 &69971235
 Prefab:
   m_ObjectHideFlags: 0
@@ -908,6 +933,31 @@ Camera:
   m_PrefabParentObject: {fileID: 20962902603715368, guid: 9f921d082abd1ff459782151afcd8106,
     type: 2}
   m_PrefabInternal: {fileID: 1289164746}
+--- !u!1 &902976313 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1588377774810588, guid: 9f921d082abd1ff459782151afcd8106,
+    type: 2}
+  m_PrefabInternal: {fileID: 1289164746}
+--- !u!114 &902976315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902976313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+16
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1 &1196333269 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 124274, guid: 20ddc844cd25b244f8005cba06955856, type: 2}
@@ -924,6 +974,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 4.8, z: 1.48}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1283403237 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1352175820572702, guid: 9f921d082abd1ff459782151afcd8106,
+    type: 2}
+  m_PrefabInternal: {fileID: 1289164746}
+--- !u!114 &1283403239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1283403237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+16
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1001 &1289164746
 Prefab:
   m_ObjectHideFlags: 0

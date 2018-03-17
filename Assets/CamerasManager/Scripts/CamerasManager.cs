@@ -72,23 +72,20 @@ public class CamerasManager : MonoBehaviour
                 if (cameras[i].Camera)
                 {
 
-                    //UNCOMMENT HERE
-                    RenderTexture rt = new RenderTexture((int)cameras[i].Camera.rect.width, (int)cameras[i].Camera.rect.height, 24);
-                    cameras[i].Camera.targetTexture = rt;
-
-                    //rt.antiAliasing = 8;
-
-                    Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
-                    cameras[i].Camera.Render();
-                    RenderTexture.active = rt;
-                    screenShot.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
-                    cameras[i].Camera.targetTexture = null;
-                    RenderTexture.active = null; // JC: added to avoid errors
-                    Destroy(rt);
-                    byte[] bytes = screenShot.EncodeToPNG();
-
-                    string filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
-                    System.IO.File.WriteAllBytes(filename, bytes);
+                    //UNCOMMENT HERE FOR VIDEO SAVING
+                    //RenderTexture rt = new RenderTexture((int)cameras[i].Camera.rect.width, (int)cameras[i].Camera.rect.height, 24);
+                    //cameras[i].Camera.targetTexture = rt;
+                    ////rt.antiAliasing = 8;
+                    //Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+                    //cameras[i].Camera.Render();
+                    //RenderTexture.active = rt;
+                    //screenShot.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+                    //cameras[i].Camera.targetTexture = null;
+                    //RenderTexture.active = null; // JC: added to avoid errors
+                    //Destroy(rt);
+                    //byte[] bytes = screenShot.EncodeToPNG();
+                    //string filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
+                    //System.IO.File.WriteAllBytes(filename, bytes);
 
                     if (enableDataSave)
                     {
@@ -114,14 +111,15 @@ public class CamerasManager : MonoBehaviour
                         //}
 
                         persone = GameObject.FindGameObjectsWithTag(tagPerson);
-                        //If a maximum number of trajectories has been reached
-                        if (limitTrajectories && persone.Length >= maxTrajectories)
-                        {
-                            Application.Quit();
-                        }
                         foreach (GameObject person in persone)
                         {
-
+                            Debug.Log(person.name);
+                            Debug.Log(maxTrajectories.ToString());
+                            //If a maximum number of trajectories has been reached
+                            if (limitTrajectories && person.name.Contains(maxTrajectories.ToString()))
+                            {
+                                Application.Quit();
+                            }
                             Transform targetCam = person.transform.Find("TargetCamera");
                             Transform head = person.transform.Find("Root");
                             while (head != null && head.gameObject.name != "Head")

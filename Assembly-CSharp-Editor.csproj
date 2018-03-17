@@ -55,6 +55,7 @@
      <Compile Include="Assets\Editor\GLDebug.cs" />
      <Compile Include="Assets\Editor\PeopleEditorGenerator_Editor.cs" />
      <Compile Include="Assets\Editor\RectangularSource_Editor.cs" />
+     <Compile Include="Assets\FFmpegOut\Editor\CameraCaptureEditor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicAssetLoaderEditor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicCharacterAvatarEditor.cs" />
      <Compile Include="Assets\UMA\Core\Extensions\DynamicCharacterSystem\Scripts\Editor\DynamicCharacterSystemEditor.cs" />

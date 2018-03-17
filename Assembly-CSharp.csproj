@@ -54,6 +54,10 @@
      <Compile Include="Assets\CamerasManager\Scripts\CamerasManager.cs" />
      <Compile Include="Assets\Downloaded\Cars\Scripts\TakeScreenshot.cs" />
      <Compile Include="Assets\Downloaded\Cars\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\FFmpegOut\CameraCapture.cs" />
+     <Compile Include="Assets\FFmpegOut\FFmpegConfig.cs" />
+     <Compile Include="Assets\FFmpegOut\FFmpegPipe.cs" />
+     <Compile Include="Assets\FFmpegOut\Internal\Blitter.cs" />
      <Compile Include="Assets\PeopleSources\Scripts\RectangularSource.cs" />
      <Compile Include="Assets\PeopleSources\Scripts\SourceController.cs" />
      <Compile Include="Assets\Person\Scripts\Group.cs" />
@@ -244,6 +248,7 @@
      <Compile Include="Assets\UMA\Examples\Physics Examples\Scripts\FPSWalkerEnhanced.cs" />
      <Compile Include="Assets\UMA\Examples\Physics Examples\Scripts\SmoothMouseLook.cs" />
      <Compile Include="Assets\UMA\Examples\Physics Examples\Scripts\UMAShooter.cs" />
+     <None Include="Assets\FFmpegOut\Internal\Shader\CameraCapture.shader" />
      <None Include="Assets\UMA\Examples\Extensions Examples\DynamicCharacterSystem\Assets\Resources\CharacterRecipes\Fram.txt" />
      <None Include="Assets\UMA\Examples\Extensions Examples\DynamicCharacterSystem\Assets\Resources\CharacterRecipes\HumanMaleChallenger.txt" />
      <None Include="Assets\UMA\InternalDataStore\InGame\Resources\PlaceholderAssets\PlaceholderAssetsREADME.txt" />

@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableVideoSave: 1
   enableDataSave: 1
-  limitTrajectories: 0
+  limitTrajectories: 1
   maxTrajectories: 174
   folder: VideoUcyUniv
   frameRate: 15
