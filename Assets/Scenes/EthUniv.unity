@@ -1064,6 +1064,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f88fcd18a7b3e134b8a8d1e3635003c2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1097790398 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1424077103592212, guid: f88fcd18a7b3e134b8a8d1e3635003c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097790397}
+--- !u!1 &1097790399 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1882910798740168, guid: f88fcd18a7b3e134b8a8d1e3635003c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097790397}
+--- !u!1 &1097790400 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1071179889100100, guid: f88fcd18a7b3e134b8a8d1e3635003c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1097790397}
+--- !u!114 &1097790401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097790398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
+--- !u!114 &1097790402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097790399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
+--- !u!114 &1097790403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1097790400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 15
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!1 &1142075829
 GameObject:
   m_ObjectHideFlags: 0

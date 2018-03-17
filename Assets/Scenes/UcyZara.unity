@@ -2230,6 +2230,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fe64435de0b4ea45967a9b548d45fbd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1638048347 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1110067782883686, guid: 1fe64435de0b4ea45967a9b548d45fbd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638048346}
+--- !u!1 &1638048348 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1621226975716306, guid: 1fe64435de0b4ea45967a9b548d45fbd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638048346}
+--- !u!1 &1638048349 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1395837259575108, guid: 1fe64435de0b4ea45967a9b548d45fbd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638048346}
+--- !u!114 &1638048350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638048347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 30
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
+--- !u!114 &1638048351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638048348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 30
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
+--- !u!114 &1638048352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1638048349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66fbd5ffe9b9d64da304996f1919f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setResolution: 1
+  _width: 1280
+  _height: 720
+  _frameRate: 30
+  _allowSlowDown: 1
+  _preset: 0
+  _startTime: 0
+  _recordLength: 1e+20
+  _shader: {fileID: 4800000, guid: a4bd3b00ad1ed53458ec6ff07694985e, type: 3}
 --- !u!4 &1644685051 stripped
 Transform:
   m_PrefabParentObject: {fileID: 419960, guid: fe204993f83ea534c99e733c6ff995a8, type: 2}
