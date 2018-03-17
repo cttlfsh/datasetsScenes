@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -118,7 +119,7 @@ public class CamerasManager : MonoBehaviour
                             //If a maximum number of trajectories has been reached
                             if (limitTrajectories && person.name.Contains(maxTrajectories.ToString()))
                             {
-                                Application.Quit();
+                                EditorApplication.isPlaying = false;
                             }
                             Transform targetCam = person.transform.Find("TargetCamera");
                             Transform head = person.transform.Find("Root");
