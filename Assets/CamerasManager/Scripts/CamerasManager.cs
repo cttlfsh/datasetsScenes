@@ -24,6 +24,12 @@ public class CamerasManager : MonoBehaviour
     private string tagStationaryGroup = "StationaryGroup";
     private string sceneName;
 
+    RenderTexture rt = null;
+    Rect rect;
+    Texture2D screenShot;
+    byte[] bytes;
+    string filename;
+
     // inizializzazione
     void Start()
     {
@@ -65,6 +71,12 @@ public class CamerasManager : MonoBehaviour
     // funzione chiamata dopo Update()
     void LateUpdate()
     {
+        if (!rt)
+        {
+            rt = new RenderTexture(1280, 720, 24);
+            rect = new Rect(0, 0, 1280, 720);
+            screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+        }
         if (enableVideoSave)
         {
             // per ogni telecamera
@@ -75,18 +87,19 @@ public class CamerasManager : MonoBehaviour
 
                     //UNCOMMENT HERE FOR VIDEO SAVING
                     //RenderTexture rt = new RenderTexture((int)cameras[i].Camera.rect.width, (int)cameras[i].Camera.rect.height, 24);
-                    //cameras[i].Camera.targetTexture = rt;
-                    ////rt.antiAliasing = 8;
+                    cameras[i].Camera.targetTexture = rt;
+                    //rt.antiAliasing = 8;
                     //Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
-                    //cameras[i].Camera.Render();
-                    //RenderTexture.active = rt;
-                    //screenShot.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
-                    //cameras[i].Camera.targetTexture = null;
-                    //RenderTexture.active = null; // JC: added to avoid errors
-                    //Destroy(rt);
-                    //byte[] bytes = screenShot.EncodeToPNG();
-                    //string filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
-                    //System.IO.File.WriteAllBytes(filename, bytes);
+                    cameras[i].Camera.Render();
+                    RenderTexture.active = rt;
+                    //Rect rect = new Rect(0, 0, rt.width, rt.height);
+                    screenShot.ReadPixels(rect, 0, 0);
+                    cameras[i].Camera.targetTexture = null;
+                    RenderTexture.active = null; // JC: added to avoid errors
+                    Destroy(rt);
+                    bytes = screenShot.EncodeToPNG();
+                    filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
+                    System.IO.File.WriteAllBytes(filename, bytes);
 
                     if (enableDataSave)
                     {
