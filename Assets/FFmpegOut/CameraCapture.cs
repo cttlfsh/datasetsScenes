@@ -72,6 +72,7 @@ namespace FFmpegOut
 
         void Update()
         {
+            Debug.Log("Frame 2: " + Time.frameCount);
             _elapsed += Time.deltaTime;
 
             if (_startTime <= _elapsed && _elapsed < _startTime + _recordLength)

@@ -354,8 +354,8 @@ MonoBehaviour:
   enableVideoSave: 1
   enableDataSave: 1
   limitTrajectories: 1
-  maxTrajectories: 194
-  folder: VideoUcyZara
+  maxTrajectories: 210
+  folder: VideoUcyZara2
   frameRate: 15
   cameras:
   - Name: Camera_001

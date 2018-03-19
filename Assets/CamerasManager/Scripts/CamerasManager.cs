@@ -86,20 +86,20 @@ public class CamerasManager : MonoBehaviour
                 {
 
                     //UNCOMMENT HERE FOR VIDEO SAVING
-                    //RenderTexture rt = new RenderTexture((int)cameras[i].Camera.rect.width, (int)cameras[i].Camera.rect.height, 24);
-                    cameras[i].Camera.targetTexture = rt;
-                    //rt.antiAliasing = 8;
-                    //Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
-                    cameras[i].Camera.Render();
-                    RenderTexture.active = rt;
-                    //Rect rect = new Rect(0, 0, rt.width, rt.height);
-                    screenShot.ReadPixels(rect, 0, 0);
-                    cameras[i].Camera.targetTexture = null;
-                    RenderTexture.active = null; // JC: added to avoid errors
-                    Destroy(rt);
-                    bytes = screenShot.EncodeToPNG();
-                    filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
-                    System.IO.File.WriteAllBytes(filename, bytes);
+                    ////RenderTexture rt = new RenderTexture((int)cameras[i].Camera.rect.width, (int)cameras[i].Camera.rect.height, 24);
+                    //cameras[i].Camera.targetTexture = rt;
+                    ////rt.antiAliasing = 8;
+                    ////Texture2D screenShot = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+                    //cameras[i].Camera.Render();
+                    //RenderTexture.active = rt;
+                    ////Rect rect = new Rect(0, 0, rt.width, rt.height);
+                    //screenShot.ReadPixels(rect, 0, 0);
+                    //cameras[i].Camera.targetTexture = null;
+                    //RenderTexture.active = null; // JC: added to avoid errors
+                    //Destroy(rt);
+                    //bytes = screenShot.EncodeToPNG();
+                    //filename = string.Format("{0}/frame_{1:D04}.png", cameras[i].Folder, Time.frameCount);
+                    //System.IO.File.WriteAllBytes(filename, bytes);
 
                     if (enableDataSave)
                     {
@@ -180,6 +180,11 @@ public class CamerasManager : MonoBehaviour
                             screenPos.y = cameras[i].Camera.pixelHeight - screenPos.y;
                             Vector3 screenPosHead = cameras[i].Camera.WorldToScreenPoint(head.position);
                             screenPosHead.y = cameras[i].Camera.pixelHeight - screenPosHead.y;
+
+                            if (i == 2)
+                            {
+                                Debug.Log("Frame: " + Time.frameCount + ", " + cameras[i].Name + screenPos);
+                            }
                             //screenPos.x = screenPos.x * cameras[i].Camera.rect.width;
                             //screenPos.y = cameras[i].Camera.rect.height - (screenPos.y * cameras[i].Camera.rect.height);
                             //screenPosHead.x = screenPosHead.x * cameras[i].Camera.rect.width;
@@ -193,16 +198,16 @@ public class CamerasManager : MonoBehaviour
                                 if (i == 0)
                                 {
                                     System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
-                                       Time.frameCount, person.GetComponent<Person>().PersonID,
+                                       Time.frameCount + 15, person.GetComponent<Person>().PersonID,
                                        targetCam.position.x, targetCam.position.y, targetCam.position.z,
                                        head.position.x, head.position.y, head.position.z,
                                        person.transform.parent.GetComponent<Group>().GroupID));
                                 }
                                 //UNCOMMENT HERE
                                 System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
 
                             }
                             else if (person.transform.parent.CompareTag(tagStationaryGroup))
@@ -211,16 +216,16 @@ public class CamerasManager : MonoBehaviour
                                 if (i == 0)
                                 {
                                     System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID,
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID,
                                    targetCam.position.x, targetCam.position.y, targetCam.position.z,
                                    head.position.x, head.position.y, head.position.z,
                                    person.transform.parent.GetComponent<Group>().GroupID));
                                 }
                                 //UNCOMMENT HERE
                                 System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, person.transform.parent.GetComponent<Group>().GroupID));
                                 System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, person.transform.parent.GetComponent<Group>().GroupID));
 
         }
                             else
@@ -229,16 +234,16 @@ public class CamerasManager : MonoBehaviour
                                 if (i == 0)
                                 {
                                     System.IO.File.AppendAllText(fileWorld, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID,
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID,
                                    targetCam.position.x, targetCam.position.y, targetCam.position.z,
                                    head.position.x, head.position.y, head.position.z,
                                    "0"));
                                 }
                                 //UNCOMMENT HERE
                                 System.IO.File.AppendAllText(fileHead, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, "0"));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPosHead.x, screenPosHead.y, "0"));
                                 System.IO.File.AppendAllText(fileFeet, string.Format("{0}\t{1}\t{2}\t{3}\t{4}\n",
-                                   Time.frameCount, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, "0"));
+                                   Time.frameCount + 15, person.GetComponent<Person>().PersonID, screenPos.x, screenPos.y, "0"));
 
                             }
                         }
